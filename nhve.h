@@ -56,7 +56,12 @@ enum nhve_retval_enum
 
 //NULL on error, non NULL on success
 struct nhve *nhve_init(const struct nhve_net_config *net_config, const struct nhve_hw_config *hw_config);
+
+//NULL on error, non NULL on success
+struct nhve *nhve_multi_init(const struct nhve_net_config *net_config, const struct nhve_hw_config *hw_config, int hw_size);
+
 void nhve_close(struct nhve *n);
+
 
 //NHVE_OK on success, NHVE_ERROR on error
 //pass NULL frame to flush encoder
